@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import Image from 'next/image';
 // if some issue with  usePathname add the part about useClient directive to make it work == 'use client'
 import { sidebarLinks } from '@/constants';
 import { usePathname } from 'next/navigation';
@@ -15,7 +16,8 @@ const SideBar = () => {
         {}
         {/* Use this to populate the sidebarlinks with routes */}
       {sidebarLinks.map((link)=>{
-        const isActive = pathname ==link.route || pathname.startsWith(link.route)
+        const isActive = pathname ==link.route || pathname.startsWith(`${link.route}/`)
+        // console.log(link,isActive)
         return (
           <Link
           href={link.route}
@@ -24,7 +26,13 @@ const SideBar = () => {
             'bg-[var(--blue-1)]':isActive,
           })}
           >
-            {link.label}
+            <Image
+            src={link.imgUrl}
+            alt={link.label}
+            width={24}
+            height={24}
+            />
+            <p className='text-lg font-semibold max-lg:hidden'>{link.label}</p>
           </Link>
         )
       })

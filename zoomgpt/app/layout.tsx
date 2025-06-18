@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--darks-2)]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--darks-2)] h-full overflow-hidden`}
         // this is the base bg color for the app bg-[var(--dark-1)]
       >
         {children}

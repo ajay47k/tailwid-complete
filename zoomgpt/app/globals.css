@@ -44,9 +44,9 @@
 }
 
 :root {
-  --darks-1: #1C1F2E;
-  --darks-2:#161925;
-  --blue-1:#0E78F9;
+  --darks-1: #7071F1;
+  --darks-2:#C6C6FA;
+  --blue-1:#6567C7;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
